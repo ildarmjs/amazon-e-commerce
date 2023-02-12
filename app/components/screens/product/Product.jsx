@@ -2,7 +2,8 @@ import { addToCard, deleteToCart } from '@/app/store/slices/cartSlice'
 import Image from 'next/image'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Gallery from './Gallery/Gallery'
+import Gallery from './gallery/Gallery'
+
 import s from './Product.module.scss'
 const Product = ({ product }) => {
 	const dispatch = useDispatch()

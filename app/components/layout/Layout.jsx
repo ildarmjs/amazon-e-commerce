@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './Header/Header'
-import Sidebar from './Sidebar/Sidebar'
 import s from './Layout.module.scss'
+import Header from './header/Header'
+import Sidebar from './sidebar/Sidebar'
 const Layout = ({ children }) => {
 	return (
 		<div className={s.layout}>
