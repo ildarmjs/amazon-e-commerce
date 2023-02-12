@@ -1,0 +1,30 @@
+.card {
+	@apply relative;
+	&__image {
+		@apply w-[300px] h-96 relative rounded-xl bg-white mb-3;
+		.image {
+			@apply p-7 scale-100 transition duration-500 hover:scale-105;
+		}
+	}
+	&__hearts {
+		@apply absolute top-3 right-5 cursor-pointer;
+	}
+	&__title {
+		@apply font-bold text-[16px];
+	}
+	&__brand {
+		@apply text-blue-600 font-bold mb-2;
+	}
+	&__stars {
+		@apply flex items-center mb-3;
+		.star {
+			@apply text-yellow-500;
+		}
+		span {
+			@apply text-yellow-500 text-[16px] font-bold ml-2;
+		}
+	}
+	&__price {
+		@apply text-3xl font-bold;
+	}
+}

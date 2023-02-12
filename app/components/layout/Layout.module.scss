@@ -1,0 +1,20 @@
+.layout {
+	display: grid;
+	grid-template-rows: 70px auto;
+	grid-template-columns: 250px 10fr;
+	grid-template-areas:
+		'header header'
+		'sidebar content';
+}
+.sidebar {
+	background: #111317;
+	border-right: 2px solid #7c7d80;
+	grid-area: sidebar;
+}
+.content {
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	background: rgb(240, 240, 240);
+	grid-area: content;
+}

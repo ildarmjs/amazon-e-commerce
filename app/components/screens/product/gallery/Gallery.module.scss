@@ -1,0 +1,28 @@
+.gallery {
+	&__image {
+		@apply w-[600px] h-[600px] relative rounded-xl bg-white mb-3;
+		.image {
+			@apply p-3;
+		}
+		.main {
+		}
+	}
+	.item {
+		@apply mb-4;
+		&.active {
+			@apply border border-[#ff9900];
+		}
+	}
+}
+.list {
+	@apply flex w-[600px] flex-wrap justify-between;
+	&__image {
+		@apply w-[120px] h-[120px] relative bg-white;
+		.image {
+			padding: 3px;
+		}
+	}
+}
+.image {
+	@apply mr-3;
+}

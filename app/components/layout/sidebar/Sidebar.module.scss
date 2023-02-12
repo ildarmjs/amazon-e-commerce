@@ -1,0 +1,38 @@
+.aside {
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	height: 100vh;
+	.list {
+		> li {
+			font-size: 16px;
+			margin-bottom: 20px;
+			color: #f2f2f2;
+			padding: 12px 20px;
+			position: relative;
+
+			.link {
+				color: #f2f2f2;
+				&:hover {
+					color: #ff9900;
+				}
+			}
+
+			&.active {
+				color: #ff9900;
+				background: #252f3d;
+				border-radius: 10px;
+				&::after {
+					content: '';
+					position: absolute;
+					left: -15px;
+					top: 0;
+					height: 39px;
+					border-radius: 0px 10px 10px 0px;
+					width: 4px;
+					background: #ff9900;
+				}
+			}
+		}
+	}
+}

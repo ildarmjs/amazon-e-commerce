@@ -1,0 +1,102 @@
+// .card_link {
+// 	color: #000;
+// 	font-size: 16px;
+// }
+// .card {
+// 	border: 1px solid #000;
+// 	// border: 1px solid #000;
+// 	// margin-right: 20px;
+// 	// flex: 0 1 10%;
+// 	// padding: 0 10px;
+// 	// margin-bottom: 30px;
+// }
+// .image {
+// 	width: 300px;
+// 	height: 300px;
+// 	position: relative;
+// 	border-radius: 20px;
+// 	background: #fff;
+// 	margin-bottom: 15px;
+// 	position: relative;
+// }
+
+// .name_heart {
+// 	// display: flex;
+// }
+// .product_image {
+// 	// padding: 30px;
+// 	transform: scale(1);
+// 	transition: transform 0.3s ease 0s;
+// 	&:hover {
+// 		transform: scale(1.2);
+// 	}
+// }
+// .btn_heart {
+// 	cursor: pointer;
+// 	color: #ff9900;
+// }
+// .btn_heart_outline {
+// 	cursor: pointer;
+// 	color: #ff9900;
+// }
+
+// .title {
+// 	width: 200px;
+// 	font-size: 18px;
+// 	font-weight: bold;
+// 	margin-bottom: 10px;
+// 	white-space: nowrap;
+// 	overflow: hidden;
+// 	text-overflow: ellipsis;
+// 	position: relative;
+// }
+// .name {
+// 	color: #3134de;
+// 	font-weight: bold;
+// 	margin-bottom: 10px;
+// 	flex: 0 1 150px;
+// }
+// .prices {
+// 	display: flex;
+// 	align-items: center;
+// }
+// .new {
+// 	font-size: 24px;
+// 	font-weight: bold;
+// 	margin-right: 10px;
+// }
+// .old {
+// 	font-size: 18px;
+// 	color: #7c7d80;
+// 	text-decoration: line-through;
+// }
+.card {
+	@apply relative;
+	&__image {
+		@apply w-[300px] h-96 relative rounded-xl bg-white mb-3;
+		.image {
+			@apply p-7 scale-100 transition duration-500 hover:scale-105;
+		}
+	}
+	&__hearts {
+		@apply absolute top-3 right-5 cursor-pointer;
+	}
+	&__title {
+		@apply font-bold text-[16px];
+	}
+	&__brand {
+		@apply text-blue-600 font-bold mb-2;
+	}
+	&__stars {
+		@apply flex items-center mb-3;
+		.star {
+			@apply text-yellow-500;
+		}
+		span {
+			@apply text-yellow-500 text-[16px] font-bold ml-2;
+		}
+	}
+	&__price {
+		@apply text-3xl font-bold;
+	}
+}

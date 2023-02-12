@@ -1,0 +1,108 @@
+.header {
+	position: relative;
+	border-bottom: 2px solid #7c7d80;
+	grid-area: header;
+	background: #111317;
+	padding: 0 20px;
+}
+.header_main {
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	cursor: pointer;
+}
+
+.cart {
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10px;
+	background: #ff9900;
+	position: relative;
+	margin-right: 20px;
+	span {
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		border-radius: 50%;
+	}
+}
+.likes {
+	cursor: pointer;
+	margin-right: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	background: #ff9900;
+	position: relative;
+
+	// &:hover {
+	// 	color: #fff;
+	// }
+	span {
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		border-radius: 50%;
+	}
+}
+.total_price {
+	margin-left: 10px;
+	flex: 1 1 auto;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+.actions {
+	width: 300px;
+	display: flex;
+
+	align-items: center;
+}
+.avatar {
+	/* margin-left: 40px; */
+	padding: 2px;
+	border-radius: 50%;
+	border: 1px solid #ff9900;
+}
+.img {
+	border-radius: 50%;
+	/* overflow: hidden; */
+}
+
+.input {
+	color: #fff;
+	height: 40px;
+	width: 280px;
+	padding: 0 10px;
+	font-size: 18px;
+	border-radius: 10px 0px 0px 10px;
+	background: #252f3d;
+	&:focus {
+		background: #485566;
+	}
+}
+.btn {
+	border-radius: 0px 10px 10px 0px;
+	color: #fff;
+	height: 40px;
+	padding: 0 15px;
+	background: #ff9900;
+	transition: background 0.3s ease 0s;
+	&:hover {
+		background: #bd7202;
+	}
+}
