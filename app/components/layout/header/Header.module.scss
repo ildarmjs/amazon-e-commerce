@@ -8,13 +8,18 @@
 .header_main {
 	padding: 10px 0;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 .logo {
+	margin-left: 40px;
+	margin-right: 40px;
 	cursor: pointer;
 }
-
+.search {
+	margin-left: 40px;
+	position: relative;
+	flex: 0 1 75%;
+}
 .cart {
 	cursor: pointer;
 	padding: 10px;
