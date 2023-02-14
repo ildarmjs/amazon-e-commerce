@@ -1,7 +1,6 @@
 import Product from '@/app/components/screens/product/Product'
 
 const InfoProduct = ({ product }) => {
-	console.log(product)
 	return <Product product={product} />
 }
 

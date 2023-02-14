@@ -7,6 +7,7 @@ import s from './Cart.module.scss'
 import CartItem from './CartItem'
 const Cart = () => {
 	const items = useSelector(state => state.cart.itemsInCart)
+
 	if (items.length === 0) {
 		return (
 			<div>

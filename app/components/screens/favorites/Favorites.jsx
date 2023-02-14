@@ -1,13 +1,21 @@
 import { formatToCurrency } from '@/app/helpers/formatToCurrency'
+import { deleteToFavorites } from '@/app/store/slices/favoritesSlice'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { BsSuitHeart, BsSuitHeartFill } from 'react-icons/bs'
 import { MdStars } from 'react-icons/md'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import s from './Favorites.module.scss'
 const Favorites = () => {
 	const items = useSelector(state => state.favorites.itemsInFavorites)
+	const dispatch = useDispatch()
+	const deleteItem = id => {
+		dispatch(deleteToFavorites(id))
+	}
+	if (items.length <= 0) {
+		return <h1 className='text-3xl font-bold'>Избранные товары отсутсвуют</h1>
+	}
 	return (
 		<>
 			{items.map(item => (
@@ -26,7 +34,13 @@ const Favorites = () => {
 						</a>
 					</Link>
 
-					<div className={s.card__hearts}></div>
+					<div className={s.card__hearts}>
+						<BsSuitHeartFill
+							size={20}
+							color={'#ff9900'}
+							onClick={() => deleteItem(item.id)}
+						/>
+					</div>
 					<div className={s.card__info}>
 						<h3 className={s.card__title}>{item.title}</h3>
 						<h4 className={s.card__brand}>{item.brand}</h4>

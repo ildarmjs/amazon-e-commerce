@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
+import cn from 'classnames'
 const HomePage = () => {
 	return (
 		<div className='grid grid-cols-4 gap-3 mb-5'>
@@ -15,7 +15,6 @@ const HomePage = () => {
 							layout='fill'
 							objectFit='cover'
 						/>
-						{/* <span>Ноутбуки</span> */}
 					</div>
 				</Link>
 			</div>
@@ -29,7 +28,6 @@ const HomePage = () => {
 							layout='fill'
 							objectFit='cover'
 						/>
-						{/* <span>Ноутбуки</span> */}
 					</div>
 				</Link>
 			</div>
@@ -43,7 +41,6 @@ const HomePage = () => {
 							layout='fill'
 							objectFit='cover'
 						/>
-						{/* <span>Ноутбуки</span> */}
 					</div>
 				</Link>
 			</div>
@@ -58,7 +55,6 @@ const HomePage = () => {
 							layout='fill'
 							objectFit='cover'
 						/>
-						{/* <span>Ноутбуки</span> */}
 					</div>
 				</Link>
 			</div>
@@ -72,7 +68,6 @@ const HomePage = () => {
 							layout='fill'
 							objectFit='cover'
 						/>
-						{/* <span>Ноутбуки</span> */}
 					</div>
 				</Link>
 			</div>

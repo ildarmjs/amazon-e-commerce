@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { deleteToCart } from '@/app/store/slices/cartSlice'
 import { formatToCurrency } from '@/app/helpers/formatToCurrency'
 const CartMenu = ({ items, onClick }) => {
+	
 	return (
 		<div className={s.cart_menu}>
 			<ul className={s.cart_list}>
