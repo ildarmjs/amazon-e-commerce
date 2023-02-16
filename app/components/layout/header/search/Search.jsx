@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import s from '../Header.module.scss'
+import { FiSearch } from 'react-icons/fi'
 const Search = () => {
 	const [term, setTerm] = useState('')
 	const [isOpen, setIsOpen] = useState(true)
@@ -12,7 +13,8 @@ const Search = () => {
 		dispatch(fetchAsyncSearch(term))
 	}
 	const items = useSelector(state => state.search.items)
-	const inputClickHandler = () => {
+	const inputClickHandler = e => {
+		e.preventDefault()
 		setIsOpen(true)
 	}
 	const itemClickHandler = () => {
@@ -23,7 +25,7 @@ const Search = () => {
 	// })
 	return (
 		<div className={s.search}>
-			<form>
+			<form className='flex items-center'>
 				<input
 					className='w-[400px] bg-[#3d4f68] px-3 py-2 text-white border-[#7c7d80] border-2 rounded-2xl  focus:border-[#ff9900] '
 					type='text'
@@ -32,6 +34,10 @@ const Search = () => {
 					onChange={submitHandler}
 					onClick={inputClickHandler}
 				/>
+
+				{/* <button className='bg-[#ff9900] h-[39px] px-4 inline-flex justify-center items-center '>
+						<FiSearch color='#fff' />
+					</button> */}
 			</form>
 			{term && isOpen ? (
 				<div
