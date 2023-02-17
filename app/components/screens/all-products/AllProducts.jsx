@@ -24,13 +24,6 @@ const AllProducts = ({ product }) => {
 			dispatch(addToFavorites(product))
 		}
 	}
-	// ;<div onClick={handleClick}>
-	// 	{isItemsInFavorites ? (
-	// 		<BsSuitHeartFill size={20} className={s.btn_heart} />
-	// 	) : (
-	// 		<BsSuitHeart size={20} className={s.btn_heart_outline} />
-	// 	)}
-	// </div>
 	return (
 		<div className={s.card}>
 			<Link legacyBehavior href={`/product/${product.id}`}>

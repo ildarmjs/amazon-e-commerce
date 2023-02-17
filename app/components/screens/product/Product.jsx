@@ -34,21 +34,21 @@ const Product = ({ product }) => {
 		}
 	}
 	return (
-		<div className='flex'>
-			<div className='flex-shrink-0 flex-grow-0 basis-[40%]'>
+		<div className={s.product}>
+			<div className={s.product__gallery}>
 				<Gallery images={product.images} key={product.id} />
 			</div>
-			<div>
-				<h1 className='text-4xl font-bold mb-3'>{product.title}</h1>
-				<div className='mb-3'>
+			<div className={s.info_product}>
+				<h1 className={s.info_product__title}>{product.title}</h1>
+				<div className={s.info_product__brand}>
 					<span className='font-bold'>Бренд: </span>
-					<span className=''>{product.brand}</span>
+					<span>{product.brand}</span>
 				</div>
-				<div className='mb-4'>
+				<div className={s.info_product__desc}>
 					<h3 className='font-bold'>Описание</h3>
 					<p>{product.description}</p>
 				</div>
-				<div className='flex items-center'>
+				<div className={s.info_product__buttons}>
 					<button
 						className={
 							isItemsInCart

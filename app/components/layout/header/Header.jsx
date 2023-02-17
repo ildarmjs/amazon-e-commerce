@@ -7,7 +7,7 @@ import Search from './search/Search'
 const Header = () => {
 	return (
 		<header className={s.header}>
-			<div className={s.header_main}>
+			<div className={s.header__main}>
 				<Logo />
 				<Search />
 				<Actions />

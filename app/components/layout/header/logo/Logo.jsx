@@ -5,7 +5,7 @@ import s from '../Header.module.scss'
 const Logo = () => {
 	return (
 		<Link legacyBehavior href={'/'}>
-			<div className={s.logo}>
+			<div className={s.header__logo}>
 				<svg
 					width='120'
 					height='30'

@@ -1,74 +1,41 @@
-.order {
-	.order_info {
+.cart {
+	&__title {
+		@apply pt-5 text-[30px] font-bold mb-8;
+	}
+	&__info {
+	}
+	&__btn {
+		@apply text-white text-[16px] inline-flex justify-center items-center bg-[#029ffa]  px-[35px] mb-[30px] rounded-xl h-[45px];
+	}
+	&__price {
+		@apply text-[28px] mb-5;
+	}
+}
+
+.item {
+	@apply flex items-center flex-wrap pb-5 mb-5 border-b-2 border-solid border-[#ff9900];
+	&__image {
+		@apply w-[200px] h-[200px] relative rounded-2xl bg-white;
+		.image {
+			@apply rounded-2xl bg-white p-5;
+		}
+	}
+	&__left {
+		@apply flex-grow-0 shrink basis-[15%];
+	}
+	&__center {
+		@apply flex-grow-0 shrink basis-[60%] mr-[30px];
+	}
+	&__info {
+		@apply text-[24px] font-bold;
+	}
+	&__right {
+		@apply flex-grow-0 shrink basis-auto text-[24px];
+	}
+	&__price {
+		@apply flex items-center pl-5;
 		div {
-			font-size: 28px;
-			margin-bottom: 20px;
-		}
-		.btn_price {
-			color: #fff;
-			font-size: 16px;
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			background: #029ffa;
-			min-height: 45px;
-			padding: 0 35px;
-			border-radius: 10px;
-			margin-bottom: 30px;
-			transition: all 0.3s ease 0s;
-			&:hover {
-				background: #003e77;
-				border-radius: 15px;
-			}
-		}
-	}
-}
-.title {
-	padding-top: 30px;
-	font-size: 30px;
-	font-weight: bold;
-	margin-bottom: 30px;
-}
-.image {
-	width: 200px;
-	height: 200px;
-	position: relative;
-	border-radius: 15px;
-	background: #fff;
-}
-.item_image {
-	border-radius: 15px;
-	background: #fff;
-	padding: 20px;
-}
-.row {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	padding-bottom: 20px;
-	border-bottom: 2px solid #ff9900;
-	margin-bottom: 20px;
-	.col_left {
-		flex: 0 1 15%;
-	}
-	.col_center {
-		flex: 0 1 60%;
-		margin-right: 30px;
-		.info {
-			font-size: 24px;
-			font-weight: bold;
-		}
-	}
-	.col_right {
-		flex: 1 1 auto;
-		font-size: 24px;
-		.price {
-			display: flex;
-			align-items: center;
-			padding-left: 20px;
-			div {
-				margin-right: 20px;
-			}
+			@apply mr-5;
 		}
 	}
 }

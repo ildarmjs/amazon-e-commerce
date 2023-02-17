@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import s from '../Header.module.scss'
-import { FiSearch } from 'react-icons/fi'
 const Search = () => {
 	const [term, setTerm] = useState('')
 	const [isOpen, setIsOpen] = useState(true)
@@ -20,24 +19,18 @@ const Search = () => {
 	const itemClickHandler = () => {
 		setIsOpen(!isOpen)
 	}
-	// const filteredProducts = items.filter(item => {
-	// 	return item.title.toLowerCase().includes(term.toLowerCase())
-	// })
+
 	return (
-		<div className={s.search}>
-			<form className='flex items-center'>
+		<div className={s.header__search}>
+			<form className={s.header__form}>
 				<input
-					className='w-[400px] bg-[#3d4f68] px-3 py-2 text-white border-[#7c7d80] border-2 rounded-2xl  focus:border-[#ff9900] '
+					className={s.header__input}
 					type='text'
 					placeholder='Search'
 					value={term}
 					onChange={submitHandler}
 					onClick={inputClickHandler}
 				/>
-
-				{/* <button className='bg-[#ff9900] h-[39px] px-4 inline-flex justify-center items-center '>
-						<FiSearch color='#fff' />
-					</button> */}
 			</form>
 			{term && isOpen ? (
 				<div
@@ -47,15 +40,10 @@ const Search = () => {
 							: 'opacity-100'
 					}
 				>
-					<ul>
+					<ul className={s.header__list}>
 						{items.map(item => (
 							<Link legacyBehavior href={`/product/${item.id}`}>
-								<li
-									className='mb-3 bg-gray-500 p-3 cursor-pointer hover:bg-gray-700'
-									onClick={itemClickHandler}
-								>
-									{item.title}
-								</li>
+								<li onClick={itemClickHandler}>{item.title}</li>
 							</Link>
 						))}
 					</ul>

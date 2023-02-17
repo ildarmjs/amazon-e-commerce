@@ -19,7 +19,7 @@
 	&__image {
 		@apply w-[120px] h-[120px] relative bg-white;
 		.image {
-			padding: 3px;
+			@apply p-[3px];
 		}
 	}
 }

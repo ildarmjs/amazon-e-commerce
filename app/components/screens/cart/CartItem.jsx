@@ -13,25 +13,25 @@ const CartItem = ({ item }) => {
 
 	return (
 		<>
-			<div className={s.row}>
-				<div className={s.col_left}>
-					<div className={s.image}>
+			<div className={s.item}>
+				<div className={s.item__left}>
+					<div className={s.item__image}>
 						<Image
 							src={item.thumbnail}
-							className={s.item_image}
+							className={s.image}
 							layout='fill'
 							objectFit='contain'
 							alt={item.name}
 						/>
 					</div>
 				</div>
-				<div className={s.col_center}>
-					<h3 className={s.info}>{item.title}</h3>
+				<div className={s.item__center}>
+					<h3 className={s.item__info}>{item.title}</h3>
 				</div>
-				<div className={s.col_right}>
-					<div className={s.price}>
+				<div className={s.item__right}>
+					<div className={s.item__price}>
 						<div>{formatToCurrency(item.price)}</div>
-						<button>
+						<button className={s.item__btn}>
 							<MdDeleteOutline size={24} onClick={deleteItem} />
 						</button>
 						{/* <div className='flex items-center'>

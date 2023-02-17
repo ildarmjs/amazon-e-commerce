@@ -6,8 +6,8 @@ import { useRouter } from 'next/router'
 const Sidebar = () => {
 	const { asPath } = useRouter()
 	return (
-		<aside className={s.aside}>
-			<ul className={s.list}>
+		<aside className={s.menu}>
+			<ul className={s.menu__list}>
 				<li
 					className={cn({
 						[s.active]: asPath === '/',

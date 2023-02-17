@@ -19,14 +19,16 @@ const Cart = () => {
 		)
 	}
 	return (
-		<div className={s.order}>
-			<h2 className={s.title}>Корзина</h2>
+		<div className={s.cart}>
+			<h2 className={s.cart__title}>Корзина</h2>
 			{items.map(item => (
 				<CartItem item={item} key={item.id} />
 			))}
-			<div className={s.order_info}>
-				<div>Заказ на сумму: {formatToCurrency(calcTotalPrice(items))}</div>
-				<button className={s.btn_price}>Оформить!</button>
+			<div className={s.cart___info}>
+				<div className={s.cart__price}>
+					Заказ на сумму: {formatToCurrency(calcTotalPrice(items))}
+				</div>
+				<button className={s.cart__btn}>Оформить!</button>
 			</div>
 		</div>
 	)
