@@ -8,6 +8,9 @@
 - Поиск всех товаров
 - Добавление товаров в избранное
 
+Скрины:
+![Image1](https://github.com/ildarmjs/amazon-e-commerce/raw/main/screenshot/amazon1.jpg)
+
 ### [Посмотреть приложение](https://amazon-e-commerce-murex.vercel.app/)
 
 <br/>
