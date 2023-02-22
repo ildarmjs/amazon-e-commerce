@@ -10,6 +10,10 @@
 
 Скрины:
 ![Image1](https://github.com/ildarmjs/amazon-e-commerce/raw/main/screenshot/amazon1.jpg)
+![Image2](https://github.com/ildarmjs/amazon-e-commerce/raw/main/screenshot/amazon2.jpg)
+![Image3](https://github.com/ildarmjs/amazon-e-commerce/raw/main/screenshot/amazon3.jpg)
+![Image4](https://github.com/ildarmjs/amazon-e-commerce/raw/main/screenshot/amazon4.jpg)
+![Image5](https://github.com/ildarmjs/amazon-e-commerce/raw/main/screenshot/amazon5.jpg)
 
 ### [Посмотреть приложение](https://amazon-e-commerce-murex.vercel.app/)
 
