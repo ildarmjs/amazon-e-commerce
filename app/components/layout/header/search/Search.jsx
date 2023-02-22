@@ -1,4 +1,5 @@
 import { fetchAsyncSearch } from '@/app/store/slices/searchSlice'
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -43,7 +44,16 @@ const Search = () => {
 					<ul className={s.header__list}>
 						{items.map(item => (
 							<Link legacyBehavior href={`/product/${item.id}`}>
-								<li onClick={itemClickHandler}>{item.title}</li>
+								<li onClick={itemClickHandler} className='flex items-center'>
+									<Image
+										className='mr-4'
+										src={item.thumbnail}
+										alt={item.title}
+										width={50}
+										height={30}
+									/>
+									{item.title}
+								</li>
 							</Link>
 						))}
 					</ul>

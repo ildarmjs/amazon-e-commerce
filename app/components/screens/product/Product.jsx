@@ -1,3 +1,4 @@
+import { formatToCurrency } from '@/app/helpers/formatToCurrency'
 import { addToCard, deleteToCart } from '@/app/store/slices/cartSlice'
 import {
 	addToFavorites,
@@ -47,6 +48,10 @@ const Product = ({ product }) => {
 				<div className={s.info_product__desc}>
 					<h3 className='font-bold'>Описание</h3>
 					<p>{product.description}</p>
+				</div>
+				<div className={s.info_product__price}>
+					<span className='font-bold'>Цена: </span>
+					<span>{formatToCurrency(product.price)}</span>
 				</div>
 				<div className={s.info_product__buttons}>
 					<button

@@ -7,6 +7,7 @@ const favorites = () => {
 	return (
 		<>
 			<Meta title='Избранное' />
+			<h1 className='pt-5 text-[30px] font-bold mb-8'>Избранное</h1>
 			<Container>
 				<Favorites />
 			</Container>
